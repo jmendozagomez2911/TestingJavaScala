@@ -68,7 +68,7 @@ public class SortAlgorithms {
         }
 
 //Insertion sort
-        int[] arr2 = {9,14,3,2,43,11,58,22};
+        int[] arr2 = {9,14,3,2,43,11,58,22,33};
         System.out.println("\nBefore Insertion Sort");
         for(int i:arr2){
             System.out.print(i+" ");
