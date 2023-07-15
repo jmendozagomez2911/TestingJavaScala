@@ -3,17 +3,16 @@ package javas.test.DataStructures;
 public class SortAlgorithms {
 
     public static void selectionSort(int[] arr){
-        for (int i = 0; i < arr.length - 1; i++)
-        {
-            int index = i;
+        for (int i = 0; i < arr.length - 1; i++) {
+            int lowestIndex = i;
             for (int j = i + 1; j < arr.length; j++){
-                if (arr[j] < arr[index]){
-                    index = j;//searching for lowest index
+                if (arr[j] < arr[lowestIndex]){
+                    lowestIndex = j;//searching for lowest index
                 }
             }
             //aux variable = smallerNumber
-            int smallerNumber = arr[index];
-            arr[index] = arr[i];
+            int smallerNumber = arr[lowestIndex];
+            arr[lowestIndex] = arr[i];
             arr[i] = smallerNumber;
         }
     }
