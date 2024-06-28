@@ -12,6 +12,7 @@ import java.util.*;
 public class listas {
     public static void main(String[] args) {
 
+        //List -> Interface
         //The variable fruits is of type List<String>
         //fruits is a variable that can hold a reference to an object implementing the List interface, specifically with elements of type String.
         //By using new ArrayList<>(), you are instantiating an ArrayList object and assigning it to the fruits variable.
@@ -55,8 +56,8 @@ public class listas {
 
 
         //linkedlist
-        // It is a linear data structure where each element, called a node, contains a reference to the previous and next nodes.
-        //LinkedList can be useful in scenarios where frequent insertion or removal of elements at the beginning or end of the list is required.
+        // It is a linear data structure where each element, called a node, contains a reference to the next node in the sequence.
+        //LinkedList can be useful in scenarios where frequent insertion or removal of elements at the beginning of the list.
         // However, if you need frequent random access or need to access elements by index, an ArrayList might be a more suitable choice.
 
         List<String> fruits3 = new LinkedList<>();
@@ -73,6 +74,8 @@ public class listas {
         String secondFruit = fruits3.get(1);
         System.out.println("Second fruit: " + secondFruit);
 
+        //iterator.hasNext(): Se encuentra antes del primer elemento ("Apple") durante la primera iteración del bucle.
+        //iterator.next(): Avanza el Iterator al primer elemento ("Apple") durante la primera iteración del bucle.
         Iterator<String> iterator = fruits3.iterator();
         while (iterator.hasNext()) {
             String fruit = iterator.next();

@@ -7,6 +7,8 @@ import java.util.*;
  *  a stack is like a pile of items
  *  where you can only add or remove items from the top,
  *  following the LIFO principle (Last-In, First-Out).
+ *  Principle: The last element added to the collection will be the first one to be removed.
+ *  Stacks are commonly used for tasks that require tracking and managing function calls, undo operations, and parsing expressions (like evaluating postfix expressions).
  */
 
 public class Stacks {
@@ -14,7 +16,8 @@ public class Stacks {
 
         Stack<String> stack = new Stack<>();
 
-        // Push elements onto the stack
+        // Push elements on
+        // to the stack
         stack.push("Apple");
         stack.push("Banana");
         stack.push("Orange");
