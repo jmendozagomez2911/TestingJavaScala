@@ -1,4 +1,4 @@
-package javas.project.DataStructures.Listas;
+package javas.project.dataStructures.listas;
 
 import java.util.*;
 
@@ -9,7 +9,7 @@ import java.util.*;
  * where each element can be accessed by its index.
 */
 
-public class listas {
+public class Listas {
     public static void main(String[] args) {
 
         //List -> Interface

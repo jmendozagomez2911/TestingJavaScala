@@ -1,4 +1,4 @@
-package javas.test.DataStructures.Queues;
+package javas.test.dataStructures.queues;
 
 public class Main {
     public static void main(String[] args) {
