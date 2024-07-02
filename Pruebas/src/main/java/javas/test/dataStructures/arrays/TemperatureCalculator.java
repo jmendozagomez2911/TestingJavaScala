@@ -7,6 +7,8 @@ public class TemperatureCalculator {
 
     public TemperatureCalculator() {
         this.scanner = new Scanner(System.in);
+        //solo esta inicializando la variable scanner.
+        // No esta pidiendo datos.
     }
 
     public static void main(String[] args) {
@@ -15,8 +17,10 @@ public class TemperatureCalculator {
         int numberOfTemperatures = calculator.askForNumberOfTemperatures();
         double[] temperatures = calculator.askForTemperatures(numberOfTemperatures);
         double averageTemperature = calculator.calculateAverageTemperature(temperatures);
+        int daysAboveTemperature = calculator.calculateDaysAboveAverageTemperature(temperatures,averageTemperature);
 
         System.out.println("La temperatura media es: " + averageTemperature);
+        System.out.println("Los dias por encima de la media son: " + daysAboveTemperature);
     }
 
     // Método para solicitar el número de temperaturas
@@ -42,5 +46,16 @@ public class TemperatureCalculator {
             sum += temp;
         }
         return sum / temperatures.length;
+    }
+
+    private int calculateDaysAboveAverageTemperature(double[] temperatures, double averageTemp){
+        int sum = 0;
+        for(double temp : temperatures){
+            if (temp > averageTemp){
+                sum++;
+            }
+        }
+        return sum;
+
     }
 }
