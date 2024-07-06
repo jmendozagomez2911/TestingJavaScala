@@ -9,7 +9,13 @@ import java.util.*;
  * where each element can be accessed by its index.
 */
 
-public class Listas {
+/**
+ * ArrayList
+ * a list is an interface provided by the Java Collections Framework.
+ * It represents an ordered collection of elements,
+ * ArrayList is slower than arrays due to the overhead of resizing and additional methods
+ */
+public class ArrayLists {
     public static void main(String[] args) {
 
         //List -> Interface
@@ -27,6 +33,9 @@ public class Listas {
         String firstFruit = fruits.get(0);
         System.out.println("First fruit: " + firstFruit);
 
+        // Insert a new element at index 1
+        fruits.add(1, "Grapes");
+
         // Check if the ArrayList contains an element
         boolean containsBanana = fruits.contains("Banana");
         System.out.println("Contains Banana? " + containsBanana);
@@ -39,8 +48,15 @@ public class Listas {
         int index = fruits.indexOf("banana");
         System.out.println("The index of banana is: " + index);
 
+        // Remove an element by value
+        fruits.remove("Banana");
+
         //use foreach to print it
         fruits.forEach(System.out::println);
+
+        List<String> frutas = new ArrayList<>(Arrays.asList("banana","cherry","orange"));
+        //use foreach to print it
+        frutas.forEach(System.out::println);
 
 
 
@@ -54,40 +70,6 @@ public class Listas {
         // it can result in unexpected behavior, such as lost updates, incorrect order, or even ConcurrentModificationException.
 
 
-
-        //linkedlist
-        // It is a linear data structure where each element, called a node, contains a reference to the next node in the sequence.
-        //LinkedList can be useful in scenarios where frequent insertion or removal of elements at the beginning of the list.
-        // However, if you need frequent random access or need to access elements by index, an ArrayList might be a more suitable choice.
-
-        List<String> fruits3 = new LinkedList<>();
-
-        // Add elements to the LinkedList
-        fruits3.add("Apple");
-        fruits3.add("Banana");
-        fruits3.add("Orange");
-
-        // Print the LinkedList
-        System.out.println(fruits3); // Output: [Apple, Banana, Orange]
-
-        // Access elements in the LinkedList
-        String secondFruit = fruits3.get(1);
-        System.out.println("Second fruit: " + secondFruit);
-
-        //iterator.hasNext(): Se encuentra antes del primer elemento ("Apple") durante la primera iteración del bucle.
-        //iterator.next(): Avanza el Iterator al primer elemento ("Apple") durante la primera iteración del bucle.
-        Iterator<String> iterator = fruits3.iterator();
-        while (iterator.hasNext()) {
-            String fruit = iterator.next();
-            System.out.println(fruit);
-        }
-
-        //Double linkedList
-        //A Doubly LinkedList is similar to a LinkedList, but with an extra feature.
-        // In addition to knowing the next item in the list, each item also knows the previous item.
-        // It's like a chain where you can move forward and backward easily. This allows for efficient insertion,
-        // removal, and traversal in both directions.
-//
 
     }
 }
