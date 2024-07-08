@@ -1,4 +1,4 @@
-package javas.project.SortAlgorithms;
+package javas.project.sortAlgorithms;
 
 public class SortAlgorithms {
 

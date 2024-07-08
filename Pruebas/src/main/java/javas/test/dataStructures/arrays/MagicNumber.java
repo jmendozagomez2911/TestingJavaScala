@@ -1,11 +1,19 @@
-package javas.test.DataStructures.Arrays;
+package javas.test.dataStructures.arrays;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MagicNumber {
+    public static void main(String[] args) {
 
-    public boolean isMagicNumber (int number){
+        MagicNumber numero = new MagicNumber();
+
+        if (numero.isMagicNumber(19)) {
+            System.out.println("es un número mágico");
+        }
+        ;
+    }
+    private boolean isMagicNumber (int number){
         //suma = 0;
         //arrayList ListaInts;
         //int i = 0;
